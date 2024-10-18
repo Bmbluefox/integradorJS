@@ -1,8 +1,9 @@
 import { setLocalStorage } from "./src/persistence/localstorage";
 import { renderCategories } from "./src/services/categories";
+import { handleGetProductToStore } from "./src/views/store";
 import './style.css'
 
-
+handleGetProductToStore();
 renderCategories();
 
 const buttonAdd = document.getElementById('buttonAddElement');
@@ -44,7 +45,7 @@ const handleSaveorModifyElement = () => {
 const name = document.getElementById('nombreprod').value,
  image = document.getElementById('imagenprod').value,
  price = document.getElementById('precioprod').value,
- category = document.getElementById('categoriaprod').value;
+ categories = document.getElementById('categoriaprod').value;
 
 
 let object = {
@@ -52,7 +53,7 @@ let object = {
     name,
     image,
     price,
-    category
+    categories
 };
 setLocalStorage(object);
 
