@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburgueseria don Toto</title>
+    <link rel="stylesheet" href="./style.css"/>
+
+<!-- iconos y fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=filter_list" />
+  </head>
+  <body>
+    <!--header-->
+   <header>
+    <div class="container_principalHeader">
+     <div class="container_contentHeader">
+      <div>
+
+        <input
+        class = "inputHeader"
+        type = "text"
+        placeholder="Ingrese un producto"/>
+        <button class="botonBusqueda"> Buscar</button>
+  
+       </div>
+       <div>
+  
+        
+        <button id="buttonAddElement" class="botonAgregar">Agregar Producto</button>
+  
+       </div>
+     </div>
+    </div> 
+   </header>
+   <main>
+    <div class="container_view">
+      <aside class="listAside">
+        <h3>Categorias<span class="material-symbols-outlined">
+          filter_list
+          </span></h3>
+        
+          <ul id="listFilter" />
+      </aside>
+    <div class="store">
+        
+      </div>
+
+    </div>
+    <!--PopUp-->
+    <div class="popupContainer_principal" id="modalPopup">
+      <div class="popupContainer">
+        <div class="titlePopUp">
+          <h2>Agregar o Modificar un Producto</h2>
+        </div>
+        <div class="containerinputs_popup">
+          <input placeholder=" Ingrese un nombre" id="nombreprod" type="text"/>
+          <input placeholder=" Ingrese una imagen" id="imagenprod" type="text"/>
+          <input placeholder=" precio" value="0" id="precioprod" type="number"/>
+          <select id="categoriaprod">
+            <option>Seleccione una categoria</option>
+            <option>Hamburguesa</option>
+            <option>Papas Fritas</option>
+            <option>Bebidas</option>
+          </select>
+        </div>
+        <div class="containerbuttons_popup">
+          <button class="buttonPopup cancelar" id="botonCancelar">Cancelar</button>
+          <button class="buttonPopup aceptar" id="BotonAceptar">Aceptar</button>
+          <button class="buttonPopup eliminar" id="BotonEliminar">Eliminar</button>
+        </div>
+      </div>
+    </div>
+   </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

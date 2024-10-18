@@ -1,0 +1,182 @@
+/* generales*/
+*{
+  margin: 0;
+  padding: 0;
+ font-family: "Ubuntu", serif;
+}
+/* HEADER*/
+.container_principalHeader{
+  width: 100vw;
+  height: 8vh;
+  background-color: rgba(121, 88, 199, 0.623);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container_contentHeader{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.inputHeader{
+  border-radius: 0.4rem;
+  border: none;
+  padding: 0.4rem;
+  outline: none;
+  width: 25vw;
+  height: 2vh;
+  font-size: 1,5vh;
+}
+
+.botonBusqueda{
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  border: 1px solid rgb(255, 255, 255);
+  width: 6vw;
+  transition: 0.3s ease;
+}
+
+.botonBusqueda:hover{
+  cursor: pointer;
+  background-color: blueviolet;
+}
+
+.botonAgregar{
+  width: 15vw;
+  height: 3vh;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  border: 1px solid rgb(255, 255, 255);
+  transition: 0.3s ease;
+}
+
+.botonAgregar:hover{
+  cursor: pointer;
+  background-color: blueviolet;
+}
+/* MAIN*/
+.container_view{
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+}
+
+.listAside{
+  background-color: rgb(184, 184, 245);
+  height: 92vh;
+}
+
+.store{
+  background-color: lavender;
+  height: 92vh;
+}
+/* Lista Side*/
+
+.listAside{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.listAside h3 {
+  display: flex;
+  font-size: 3vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+}
+
+.listAside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 1vh;
+  margin-top: 2vh;
+}
+
+.listAside ul li {
+  
+  background-color: rgba(230, 230, 250, 0.61);
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.listAside ul li:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+  font-size: 2vh;
+}
+
+.liActive{
+  color:  blueviolet;
+  font-size: 2.5vh;
+}
+
+/* PopUp*/
+.popupContainer_principal{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  display: none; /*activar el popup*/
+  backdrop-filter: blur(3px);
+}
+
+.popupContainer{
+width: 50vw;
+height: 45vh;
+background-color: rgba(121, 88, 199, 0.623) ;
+border-radius: 1rem;
+box-shadow: 5px 2px 10px 10px rgba(0, 0, 0, 0.3);
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+.titlePopUp{
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.containerinputs_popup{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+ 
+}
+
+.containerinputs_popup input, select{
+  width: 80%;
+  border-radius: 0.4rem;
+  border: 1px solid blueviolet;
+  padding: 0.4rem;
+}
+
+.containerbuttons_popup{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonPopup{
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: 2px solid blueviolet;
+  transition: 0.3s;
+  width: 14vw;
+}
+
+.buttonPopup:hover{
+  cursor: pointer;
+  background-color: blueviolet;
+}
