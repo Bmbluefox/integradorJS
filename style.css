@@ -35,7 +35,7 @@
   border-radius: 0.4rem;
   padding: 0.4rem;
   border: 1px solid rgb(255, 255, 255);
-  width: 6vw;
+  width: 8vw;
   transition: 0.3s ease;
 }
 
@@ -46,7 +46,7 @@
 
 .botonAgregar{
   width: 15vw;
-  height: 3vh;
+  height: 6vh;
   border-radius: 0.4rem;
   padding: 0.4rem;
   border: 1px solid rgb(255, 255, 255);
@@ -70,7 +70,66 @@
  /* store*/
 .store{
   background-color: lavender;
-  height: 92vh;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.sectionStore{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerTitleSection{
+  margin: 1rem;
+  font-size: 3vh;
+}
+
+.containerProductStore{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2vh;
+  margin: 15px;
+  
+}
+
+.containerTargetItem{
+width: 25vw;
+height: 35vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 1rem;
+border: 2px solid rgb(184, 184, 245) ;
+border-radius: 0.8rem;
+transition: 0.3s;
+}
+
+.containerTargetItem:hover{
+  border: 3px solid blueviolet;
+  box-shadow: 1px 1px 10px 1px;
+}
+
+.targetProps{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.containerTargetItem h2{
+font-size: 1.5rem;
+text-align: center;
+}
+
+.sectionStore img{
+  width: 100%;
+  border-radius: 0.4rem;
 }
 /* Lista Side*/
 
@@ -104,17 +163,18 @@
   padding: 0.4rem;
   border-radius: 0.5rem;
   transition: 0.3s ease;
+  
 }
 
 .listAside ul li:hover {
   cursor: pointer;
   background-color: blueviolet;
-  font-size: 2vh;
+  font-size: 2.5vh;
 }
 
 .liActive{
   color:  blueviolet;
-  font-size: 2.5vh;
+  font-size: 3vh;
 }
 
 /* PopUp*/

@@ -56,7 +56,7 @@ let object = {
     categories
 };
 setLocalStorage(object);
-
+handleGetProductToStore();
 closeModal();
 }
 
