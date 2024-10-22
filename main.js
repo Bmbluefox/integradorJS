@@ -3,6 +3,17 @@ import { renderCategories } from "./src/services/categories";
 import { handleGetProductToStore } from "./src/views/store";
 import './style.css'
 
+export let categoriaActiva = null;
+export const setCategoriaActiva = (categoriaIn)=>{
+    categoriaActiva = categoriaIn;
+};
+
+
+export let productoActivo = null;
+export const setProductoActivo = (productoIn)=>{
+    productoActivo = productoIn;
+};
+
 handleGetProductToStore();
 renderCategories();
 
@@ -22,19 +33,29 @@ botonCancelar.addEventListener('click', ()=>{
 
     const handleCancelButton = () =>{
         closeModal();
-    }
+    };
 
-const openModal = ()=>{
+export const openModal = ()=>{
    const modal = document.getElementById('modalPopup');
    modal.style.display = "flex";
 }
 
-const closeModal = ()=>{
+export const closeModal = ()=>{
     const modal = document.getElementById('modalPopup');
     modal.style.display = "none";
- }
+    resetModal();
+ };
 
-
+const resetModal = ()=>{
+    const name = document.getElementById('nombreprod').value,
+ image = document.getElementById('imagenprod').value,
+ price = document.getElementById('precioprod').value,
+ categories = document.getElementById('categoriaprod').value;
+ image.value = "";
+ price.value = 0;
+ name.value = "";
+ categories.value = "Seleccione una categoria";
+};
 /* aceptar el producto a agregar o modificar*/
 
 const acceptButton = document.getElementById('BotonAceptar');
@@ -47,14 +68,26 @@ const name = document.getElementById('nombreprod').value,
  price = document.getElementById('precioprod').value,
  categories = document.getElementById('categoriaprod').value;
 
+ let object = null;
 
-let object = {
+ if(productoActivo){
+    object = {
+    ... productoActivo,
+    name,
+    image,
+    price,
+    categories,
+    };
+ }else{
+ object = {
     id: new Date().toISOString(),
     name,
     image,
     price,
     categories
 };
+ };
+
 setLocalStorage(object);
 handleGetProductToStore();
 closeModal();
